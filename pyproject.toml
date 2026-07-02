@@ -1,0 +1,19 @@
+[project]
+name = "meridian-routing"
+version = "1.0.0"
+description = "Ticket routing: HMAC-verified webhooks in, first-match-wins rules engine, chat channel out. Clean-room rebuild of a production microservice."
+requires-python = ">=3.11"
+dependencies = ["fastapi>=0.115"]
+
+[dependency-groups]
+dev = ["pytest>=8", "httpx>=0.27"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/meridian_routing"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

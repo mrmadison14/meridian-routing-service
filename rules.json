@@ -1,0 +1,31 @@
+[
+  {
+    "id": "urgent-to-oncall",
+    "description": "Priority = urgent",
+    "priority": "urgent",
+    "channel": "#oncall-escalations"
+  },
+  {
+    "id": "hardware",
+    "description": "Product = devices/harnesses",
+    "products": ["device", "harness"],
+    "channel": "#team-hardware"
+  },
+  {
+    "id": "platform",
+    "description": "Product = platform/config",
+    "products": ["platform"],
+    "channel": "#team-platform"
+  },
+  {
+    "id": "billing-keywords",
+    "description": "Subject mentions billing",
+    "subject_pattern": "billing|invoice|charge|refund",
+    "channel": "#team-accounts"
+  },
+  {
+    "id": "catch-all",
+    "description": "Everything else",
+    "channel": "#support-triage"
+  }
+]
