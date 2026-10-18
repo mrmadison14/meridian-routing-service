@@ -4,7 +4,7 @@
 
 A helpdesk posts ticket-created events to this service. The webhook signature is verified before anything else happens, a first-match-wins rules engine picks the right chat channel (by priority, product, or subject keyword), and the decision is delivered. It replaced a no-code workflow that had grown past what no-code review and testing could support.
 
-This is a clean-room rebuild of a production microservice I built and run, at a real volume of 120 to 250 tickets a week. The company here ("Meridian Fleet Systems") and the rules file are fictional; the architecture, the security model, and the tests are the real thing. There is an [interactive simulator](https://mrmadison14.github.io/portfolio/demo-routing-service.html) of the rules engine, and the rest of my work lives at [mrmadison14.github.io/portfolio](https://mrmadison14.github.io/portfolio/).
+This is a standalone ticket-routing service for a fictional company ("Meridian Fleet Systems"), with a made-up rules file. The architecture, the security model, and the tests are complete and runnable. There is an [interactive simulator](https://mrmadison14.github.io/portfolio/demo-routing-service.html) of the rules engine, and the rest of my work lives at [mrmadison14.github.io/portfolio](https://mrmadison14.github.io/portfolio/).
 
 ```
 helpdesk webhook ──▶ HMAC-SHA256 check ──▶ rules engine ──▶ chat channel + assignee
